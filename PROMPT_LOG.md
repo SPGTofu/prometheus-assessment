@@ -3,3 +3,6 @@
 
 "{response data} here is the data that it returns. What should I look at in order to find intraday data?"
 - Understand what I should look for in the data
+
+"here is the url: const url = `https://query1.finance.yahoo.com/v8/finance/chart/${symbol}?interval=15m`how can i get data from the past x period?"
+- Figure out how to get dat for the past month
