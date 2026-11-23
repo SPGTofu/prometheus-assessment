@@ -16,7 +16,7 @@ export async function getStockData(input: Input): Promise<DailySummary[]> {
   const { symbol } = input
   
   // Preset values for the request
-  const url = `https://query1.finance.yahoo.com/v8/finance/chart/${symbol}?interval=15m`
+  const url = `https://query1.finance.yahoo.com/v8/finance/chart/${symbol}?interval=15m&range=30d`
   const headers = {
     "User-Agent": 'Mozilla/5.0 (Windows NT 10.0; Win64; 64) AppleWebKit/537.36'
   }
@@ -62,8 +62,8 @@ export async function getStockData(input: Input): Promise<DailySummary[]> {
   const aggregatedData: DailySummary[] = Array.from(timestampMap, ([date, entry]) => ({
     day: date,
     volume: entry.volume,
-    lowAverage: entry.lowTotal / entry.count,
-    highAverage: entry.highTotal / entry.count
+    lowAverage: (Number)((entry.lowTotal / entry.count).toFixed(4)),
+    highAverage: (Number)((entry.highTotal / entry.count).toFixed(4))
   }))
 
   return aggregatedData
