@@ -7,7 +7,7 @@ export default function Search() {
   const [search, setSearch] = useState('');
 
   const handleSearch = () => {
-    const searchval = search.toUpperCase().trim();
+    const searchval = search.replace(/[#/]/g, '').toUpperCase().trim();    
     if (searchval !== '') {
       navigate(`/${searchval}`);
     }
