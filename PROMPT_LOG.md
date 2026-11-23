@@ -13,3 +13,12 @@
 
 "I also have a tests file where the the dist files are being created in the file, and not the dist. how can i fix this?"
 - How to effectively organize files
+
+"Create me a template (no current data needed) for the following pages: Homepage- I want the homepage to be a simple page where you can input a value. StockInfo- I want it to have a large area for a graph. Use chakraui components."
+
+"why is my header not appearing"
+- Fix the routing of my header
+
+"Format my stock info page with the following: add a place on top where the stock symbol is shown. add an area to display a graph."
+
+"how can i call my api onto the FE?"
