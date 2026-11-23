@@ -6,3 +6,6 @@
 
 "here is the url: const url = `https://query1.finance.yahoo.com/v8/finance/chart/${symbol}?interval=15m`how can i get data from the past x period?"
 - Figure out how to get dat for the past month
+
+"how can i best self-host my api call"
+- Learn how to self-host an api on TS
