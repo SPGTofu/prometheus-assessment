@@ -27,4 +27,20 @@
 
 "My goal is to display a graph of the daily avglow, avghigh, and volume ofr each day based on the data. what is the best approach for this?"
 
+"{Error message regarding splicing error} what is the source of the error?"
+
 "Look over my stockChart.js. Is there a discrepency between the template version and what my values are?"
+
+"How do I change the legend labels to be custom?"
+
+"{Error message regarding graph component not loading} what is the source of the error?"
+
+"why is the opacity change not triggering?"
+
+"Check my following test file for the following:
+- consistency/formatting
+- bugs
+- edge cases
+"
+
+"i want it to specifically run my main only since that function will auto run all my other tests."
