@@ -14,20 +14,22 @@ export default function Search() {
   }
 
   return (
-    <Flex flexDirection='row' mr={4} p={1}>
-      <Button
-        size='xl'
-        backgroundColor='blue'
-        color='white'
-        onClick={handleSearch}
-      >
-        Search
-      </Button>
-      <Input
-        size='xl'
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-      />
-    </Flex>
+    <form onSubmit={handleSearch}>
+      <Flex flexDirection='row' mr={4} p={1}>
+        <Button
+          size='xl'
+          backgroundColor='blue'
+          color='white'
+          onClick={handleSearch}
+        >
+          Search
+        </Button>
+        <Input
+          size='xl'
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
+      </Flex>
+      </form>
   )
 }

@@ -10,25 +10,9 @@ export default function StockChart({ stockData }) {
   const [showAvgLow, setShowAvgLow] = useState(false);
   const [showAvgHigh, setShowAvgHigh] = useState(false);
 
-  const displayValues = ['Volume', 'Average Low', 'Average High'];
-  const isDisplayedValues = [showVolume, showAvgLow, showAvgHigh];
-  const displayActionValues = [setShowVolume, setShowAvgLow, setShowAvgHigh];
-
-  let volumeOpacity = 1;
-  let avgLowOpacity = 1;
-  let avgHighOpacity = 1;
-
-  if (hoveringDataKey === 'ah') {
-    volumeOpacity = 0.5;
-  }
-
-  if (hoveringDataKey === 'al') {
-    avgLowOpacity = 0.5;
-  }
-
-  if (hoveringDataKey === 'amt') {
-    avgHighOpacity = 0.5;
-  }
+  const displayValues = ['Volume', 'Average High', 'Average Low'];
+  const isDisplayedValues = [showVolume, showAvgHigh, showAvgLow];
+  const displayActionValues = [setShowVolume, setShowAvgHigh, setShowAvgLow];
 
   const handleMouseEnter = (payload) => {
     setHoveringDataKey(payload.dataKey);
@@ -58,13 +42,13 @@ export default function StockChart({ stockData }) {
           <Tooltip />
           <Legend onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} />
           {showVolume && (
-            <Line type="monotone" dataKey="volume" name="Volume" strokeOpacity={volumeOpacity} />
-          )}
-          {showAvgLow && (
-            <Line type="monotone" dataKey="lowAverage" name="Avg. Low ($)" stroke='red' strokeOpacity={avgLowOpacity} />
+            <Line type="monotone" dataKey="volume" name="Volume" />
           )}
           {showAvgHigh && (
-            <Line type="monotone" dataKey="highAverage" name="Avg. High ($)" stroke='green' strokeOpacity={avgHighOpacity} />
+            <Line type="monotone" dataKey="highAverage" name="Avg. High ($)" stroke='green'/>
+          )}
+          {showAvgLow && (
+            <Line type="monotone" dataKey="lowAverage" name="Avg. Low ($)" stroke='red'/>
           )}
         </LineChart>
       </>
@@ -75,7 +59,7 @@ export default function StockChart({ stockData }) {
             <Checkbox.Root
               key={val}
               checked={isDisplayedValues[idx]}
-              onChange={(e) => displayActionValues[idx](e.target.checked)}
+              onCheckedChange={(e) => displayActionValues[idx](e.checked)}
             >
               <Checkbox.HiddenInput />
                 <Checkbox.Control />

@@ -44,3 +44,10 @@
 "
 
 "i want it to specifically run my main only since that function will auto run all my other tests."
+
+"review my backend and my API. Is there anything that I am missing that would break the functionality (edge cases, bugs, etc.)?"
+- fixed candle values adding missing values
+
+"for 6. CORS limited to port 5173, does that mean we need to set the localhost port of FE to 5173?"
+- No change taken
+"review my frontend. is there anything that I am missing that could break the functionality of the components?"
