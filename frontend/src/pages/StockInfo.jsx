@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom';
 import {
   Box,
+  Checkbox,
   Container,
   Flex,
   Heading,
