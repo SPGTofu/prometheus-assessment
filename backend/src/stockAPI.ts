@@ -44,6 +44,14 @@ export async function getStockData(input: Input): Promise<DailySummary[]> {
       highTotal: 0,
       count: 0
     }
+    if (
+      indicators.volume[i] == null ||
+      indicators.low[i] == null ||
+      indicators.high[i] == null
+    ) {
+      console.error("Skipped an entry: missing indicator value.")
+      continue;
+    }
     currEntry.volume += indicators.volume[i]
     currEntry.lowTotal += indicators.low[i]
     currEntry.highTotal += indicators.high[i]
