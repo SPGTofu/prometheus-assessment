@@ -1,5 +1,5 @@
-import { convertUnixToDate } from "./helpers";
-import { DailySummary } from "./models";
+import { convertUnixToDate } from "./helpers.js";
+import type { DailySummary } from "./models.js";
 
 type Input = {
   symbol: string;

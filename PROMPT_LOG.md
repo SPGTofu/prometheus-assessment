@@ -9,3 +9,7 @@
 
 "how can i best self-host my api call"
 - Learn how to self-host an api on TS
+- Update Hono's ENV to standard as it is not important here.
+
+"I also have a tests file where the the dist files are being created in the file, and not the dist. how can i fix this?"
+- How to effectively organize files
