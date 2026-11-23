@@ -14,7 +14,7 @@ export default function StockInfo() {
   const { symbol = '' } = useParams();
   const stockSymbol = decodeURIComponent(symbol).toUpperCase();
   const [error, setError] = useState('');
-  const [stockData, setStockData] = useState(null);
+  const [stockData, setStockData] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -32,11 +32,14 @@ export default function StockInfo() {
         return result;
       })
       .then((data) => {
+        if (controller.signal.aborted) return;
+        if (!Array.isArray(data)) throw new Error('The stock API returned an invalid response');
         setStockData(data);
         setLoading(false);
       })
       .catch((err) => {
-        if (err.name !== 'AbortError') setError(err.message);
+        if (err.name === 'AbortError') return;
+        setError(err.message);
         setLoading(false);
       });
 

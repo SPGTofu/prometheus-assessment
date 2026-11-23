@@ -22,3 +22,9 @@
 "Format my stock info page with the following: add a place on top where the stock symbol is shown. add an area to display a graph."
 
 "how can i call my api onto the FE?"
+
+"When I search for a new stock when I'm already on this page, I get stale data. what is the cause?"
+
+"My goal is to display a graph of the daily avglow, avghigh, and volume ofr each day based on the data. what is the best approach for this?"
+
+"Look over my stockChart.js. Is there a discrepency between the template version and what my values are?"
