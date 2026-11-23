@@ -58,13 +58,13 @@ export default function StockChart({ stockData }) {
           <Tooltip />
           <Legend onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} />
           {showVolume && (
-            <Line type="monotone" dataKey="volume" name="Volume" strokeOpacity={volumeOpacity} activeDot={{ r: 8 }} />
+            <Line type="monotone" dataKey="volume" name="Volume" strokeOpacity={volumeOpacity} />
           )}
           {showAvgLow && (
-            <Line type="monotone" dataKey="lowAverage" name="Average Low ($)" strokeOpacity={avgLowOpacity} />
+            <Line type="monotone" dataKey="lowAverage" name="Avg. Low ($)" stroke='red' strokeOpacity={avgLowOpacity} />
           )}
           {showAvgHigh && (
-            <Line type="monotone" dataKey="highAverage" name="AverageHigh ($)" strokeOpacity={avgHighOpacity} />
+            <Line type="monotone" dataKey="highAverage" name="Avg. High ($)" stroke='green' strokeOpacity={avgHighOpacity} />
           )}
         </LineChart>
       </>
